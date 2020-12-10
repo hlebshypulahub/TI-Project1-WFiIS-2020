@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'BoldFont';
+    src: url('../fonts/FiraSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NormalFont';
+    src: url('../fonts/AbhayaLibre-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px 340px 0px;
+    background-image: url(../img/background.jpg);
+}
+
+.content {
+    position: absolute;
+    height: 1050px;
+    width: 1120px;
+    padding: 30px 50px 0px;
+    background-color: cornsilk;
+}
+
+.topics {
+    margin-top: 40px;
+}
+
+.titleText {
+    color: rgb(143, 40, 40);
+    font-family: 'BoldFont';
+}
+
+.topicText {
+    color: rgb(143, 40, 40);
+    font-size: 18px;
+    font-family: 'BoldFont';
+}
+
+.descText {
+    color: rgb(143, 40, 40);
+    font-family: 'NormalFont';
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.shine {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 112, 76);
+    border-radius: 5px;
+}
+
+.shine:hover {
+    box-shadow: 0 0 15px #881717;
+    border: 1px solid #6200ff;
+}
+
+.topicImg {
+    float: left;
+}
+
+.topicDesc {
+    margin-left: 130px;
+    width: 1000px;
+}

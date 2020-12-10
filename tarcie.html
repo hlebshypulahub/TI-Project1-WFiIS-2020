@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/tarcie_style.css" rel="stylesheet">
+    <script src="js/tarcie_script.js"></script>
+    <script src="js/canvas.js"></script>
+    <title>Lekcja o tarciu</title>
+</head>
+
+<body>
+
+    <div class="content">
+        <h2 class="titleText">Lekcja o tarciu</h2>
+
+        <p class="contentText" align="justify">W warunkach ziemskich tarcie zawsze towarzyszy każdemu ruchowi ciał. We
+            wszystkich rodzajach ruchu mechanicznego niektóre ciała wchodzą w kontakt z innymi ciałami lub z ciągłym
+            płynnym lub gazowym ośrodkiem, który je otacza. Taki kontakt zawsze ma duży wpływ na ruch. Występuje siła
+            tarcia skierowana przeciwnie do ruchu.</p>
+
+        <p align="center">
+            <label for="askForTypes" class="questionText">Czy znasz rodzaje siły tarcia?</label></br>
+            <input type="radio" name="ask" value="1" checked="checked"><span
+                class="questionText">Tak!</span></input>
+            <input type="radio" name="ask" value="0"><span class="questionText">Nie do końca
+                &#128527;</span></input></br>
+            <a class="btn" href='javascript:;' onclick='drawMain(); answer();'>Odpowiedz</a>
+        </p>
+
+        <p id="answer">
+
+        </p>
+        <p>
+            <canvas id="canvas" width="700" height="450">
+            </canvas>
+        </p>
+
+        <p class="contentText" align="justify">W warunkach ziemskich tarcie zawsze towarzyszy każdemu ruchowi ciał. We
+            wszystkich rodzajach ruchu mechanicznego niektóre ciała wchodzą w kontakt z innymi ciałami lub z ciągłym
+            płynnym lub gazowym ośrodkiem, który je otacza. Taki kontakt zawsze ma duży wpływ na ruch. Występuje siła
+            tarcia skierowana przeciwnie do ruchu.</p>
+
+    </div>
+
+</body>
+
+</html>
