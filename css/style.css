@@ -30,18 +30,18 @@ body {
 }
 
 .titleText {
-    color: rgb(143, 40, 40);
+    color: rgb(92, 25, 25);
     font-family: 'BoldFont';
 }
 
 .topicText {
-    color: rgb(143, 40, 40);
+    color: rgb(92, 25, 25);
     font-size: 18px;
     font-family: 'BoldFont';
 }
 
 .descText {
-    color: rgb(143, 40, 40);
+    color: rgb(92, 25, 25);
     font-family: 'NormalFont';
     font-size: 17px;
     font-weight: 500;
@@ -53,11 +53,14 @@ body {
     box-sizing: border-box;
     border: 1px solid rgb(255, 112, 76);
     border-radius: 5px;
+    display: block;
+    overflow: hidden;
 }
 
 .shine:hover {
     box-shadow: 0 0 15px #881717;
     border: 1px solid #6200ff;
+    transform: scale(1.1);
 }
 
 .topicImg {

@@ -15,11 +15,13 @@
 body {
     margin: 0px 340px 0px;
     background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-color: #40403e;
 }
 
 .content {
     position: absolute;
-    height: 1050px;
+    height: 3500px;
     width: 1120px;
     padding: 30px 50px 0px;
     background-color: cornsilk;
@@ -30,18 +32,24 @@ body {
 }
 
 .titleText {
-    color: rgb(143, 40, 40);
+    color: rgb(92, 25, 25);
+    font-family: 'BoldFont';
+}
+
+.topicText {
+    color: rgb(92, 25, 25);
+    font-size: 18px;
     font-family: 'BoldFont';
 }
 
 .contentText {
-    color: rgb(143, 40, 40);
+    color: rgb(92, 25, 25);
     font-family: 'NormalFont';
     font-size: 18px;
 }
 
 .questionText {
-    color: rgb(143, 40, 40);
+    color: rgb(92, 25, 25);
     font-family: 'NormalFont';
     font-size: 20px;
 }
@@ -49,7 +57,7 @@ body {
 a.btn {
     text-decoration: none;
     display: inline-block;
-    padding: 5px 20px;
+    padding: 5px 15px;
     margin: 10px;
     border-radius: 7px;
     box-shadow: 0 0 50px 50px #ff5100 inset;
@@ -65,9 +73,36 @@ a.btn:hover {
     color: #6200ff;
 }
 
+.scale {
+    display: block;
+    overflow: hidden;
+    width: 119px;
+    height: 85px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 17, 255);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.scale img {
+    transition: 1s;
+    display: block;
+}
+
+.scale img:hover {
+    transform: scale(1.1);
+}
+
 #canvas {
     display: none;
     margin: 0 210px;
+}
+
+#canvas2 {
+    display: none;
+    margin: 0 160px;
 }
 
 #answer {

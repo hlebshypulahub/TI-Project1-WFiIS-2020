@@ -7,10 +7,13 @@
     <link href="css/tarcie_style.css" rel="stylesheet">
     <script src="js/tarcie_script.js"></script>
     <script src="js/canvas.js"></script>
+    <script src="js/canvas2.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/calc.js"></script>
     <title>Lekcja o tarciu</title>
 </head>
 
-<body>
+<body onload="drawCanvas2();">
 
     <div class="content">
         <h2 class="titleText">Lekcja o tarciu</h2>
@@ -22,25 +25,175 @@
 
         <p align="center">
             <label for="askForTypes" class="questionText">Czy znasz rodzaje siły tarcia?</label></br>
-            <input type="radio" name="ask" value="1" checked="checked"><span
-                class="questionText">Tak!</span></input>
+            <input type="radio" name="ask" value="1" checked="checked"><span class="questionText">Tak!</span></input>
             <input type="radio" name="ask" value="0"><span class="questionText">Nie do końca
                 &#128527;</span></input></br>
-            <a class="btn" href='javascript:;' onclick='drawMain(); answer();'>Odpowiedz</a>
+            <a class="btn" href='javascript:;' onClick='drawMain(); answer();'>Odpowiedz</a>
         </p>
 
         <p id="answer">
-
         </p>
+
         <p>
             <canvas id="canvas" width="700" height="450">
             </canvas>
         </p>
 
-        <p class="contentText" align="justify">W warunkach ziemskich tarcie zawsze towarzyszy każdemu ruchowi ciał. We
-            wszystkich rodzajach ruchu mechanicznego niektóre ciała wchodzą w kontakt z innymi ciałami lub z ciągłym
-            płynnym lub gazowym ośrodkiem, który je otacza. Taki kontakt zawsze ma duży wpływ na ruch. Występuje siła
-            tarcia skierowana przeciwnie do ruchu.</p>
+        <p class="topicText" align="left">Jak wytłumaczyć występowanie tarcia?</p>
+
+        <p class="contentText" align="justify">Stykające się powierzchnie ciał nigdy nie są idealnie płaskie i mają
+            nierówności.
+        </p>
+
+        <div class="scale">
+            <img src="img/tarcie1.jpg" alt="">
+        </div>
+
+        <p class="contentText" align="justify">Ponadto miejsca występów na jednej powierzchni nie pokrywają się z
+            miejscami występów na drugiej. To właśnie odporność na ścinanie w miejscach nierówności jest przyczyną
+            tarcia.
+        </p>
+
+        <div class="scale">
+            <img src="img/tarcie2.jpg" alt="">
+        </div>
+
+        <p class="contentText" align="justify">Ponadto nie należy zapominać, że w przypadku idealnie gładkich
+            powierzchni opory ruchu wynikają z sił przyciągania między cząsteczkami. Wyjaśnia to wpływ na siłę tarcia
+            ładunku - siłę nacisku i właściwości materiałów.
+        </p></br>
+
+        <p class="topicText" align="left">Jak zmierzyć siłę tarcia?</p>
+
+        <p class="contentText" align="justify">Można to zrobić za pomocą dynamometru. Przy równomiernym ruchu ciała
+            dynamometr wykazuje siłę uciągu równą sile tarcia. Aby ułatwić pomiar, czasami zamiast ciągnąć książkę po
+            stole, możesz zacząć przesuwać sam stół i przytrzymać książkę w miejscu, przywiązując ją do sprężyny. Siła
+            tarcia nie zmieni się od tego. <span class="questionText">Ile wynosi siła tarcia na poniższej
+                animacji?</span>
+        </p>
+
+        <p>
+            <canvas id="canvas2" width="800" height="300">
+            </canvas>
+        </p>
+
+        <p class="contentText" align="justify">Jednostką miary siły tarcia w SI (jak każda inna siła) jest 1
+            niuton [N].
+        </p></br>
+
+        <p class="topicText" align="left">Co jest bardziej opłacalne: toczenie czy ślizg?</p>
+
+        <div class="scale" style="width: 240px; height: 166px;">
+            <img src="img/tarcie3.jpg" alt="">
+        </div>
+
+        <p class="contentText" align="justify">Oczywiście walcowanie jest bardziej opłacalne niż przesuwanie. Aby
+            utrzymać toczenie, musisz przyłożyć znacznie mniejszą siłę, niż dla utrzymania ślizgu z tą samą prędkością.
+            Dlatego jasne jest, że latem jeżdżą w wózku, a nie na saniach.
+        </p>
+
+        <div class="scale" style="width: 200px; height: 159px;">
+            <img src="img/tarcie4.jpg" alt="">
+        </div>
+
+        <p class="contentText" align="justify">Ale dlaczego zimą koła ustępują biegaczom? Chodzi o to, że koła są
+            bardziej opłacalne niż biegacze tylko wtedy, gdy się toczą. A żeby koła się toczyły, musi być pod nimi
+            solidna, gładka droga, a ponadto nieśliska.
+        </p></br>
+
+        <p class="topicText" align="left">Historia siły tarcia</p>
+
+        <p class="contentText" align="justify">Pierwsze badanie praw tarcia należy do słynnego włoskiego naukowca i
+            artysty Leonarda da Vinci (XV w.): </br> Siła tarcia powstająca w wyniku kontaktu ciała z powierzchnią
+            innego ciała jest proporcjonalna do siły nacisku, skierowana przeciwnie do kierunku ruchu i nie zależy od
+            powierzchni styku stykających się powierzchni.
+        </p>
+
+        <div class="scale" style="width: 170px; height: 128px;">
+            <img src="img/tarcie5.jpg" alt="">
+        </div>
+
+        <p class="contentText" align="justify">Mierzył On siłę tarcia działającą na drewniane bryły ślizgające się po
+            desce i ustawiając je na różnych krawędziach określił zależność siły tarcia od powierzchni podparcia.
+            Niestety prace Leonarda da Vinci nie zostały opublikowane. </br></br> Jednak dopiero pod koniec XVIII wieku
+            naukowcy G. Amontons i C. Coulomb wprowadzili nową stałą fizyczną - współczynnik
+            tarcia (k). </br></br> Następnie wyprowadzono wzór na siłę tarcia:
+        </p>
+
+        <div style="width: 180px; height: 42px; margin: 0 auto;">
+            <img src="img/tarcie6.png" alt="">
+        </div>
+
+        <p class="contentText" align="justify">gdzie N - siła reakcji podpory odpowiadającą sile nacisku wywieranego
+            przez ciało na powierzchnię. </br></br> Jeśli ciało znajduje się na poziomej powierzchni, to N = Q
+            </br></br> Wartości współczynnika tarcia dla różnych materiałów można znaleźć w dokumentacji. </br></br> Już
+            od dawna wiadomo, że powierzchnie olejowane lub wręcz nawilżane są dużo łatwiejsze do ślizgania się.
+            </br></br> A na początku XX wieku pojawiła się tribologia - nauka badająca tarcie.
+        </p></br>
+
+        <p class="topicText" align="left">Zadania</p>
+
+        <p class="contentText" align="justify"><span class="topicText">№ 1. </span>Ciało o masie m = 1,0 kg leży na
+            poziomej powierzchni. Współczynnik tarcia k = 0.1. Na ciało działa pozioma siła F = 0.5 N.
+        </p>
+
+        <p class="contentText" align="justify">Siła tarcia wynosi:
+            <select id="task1">
+                <option value="1">1.48 N</option>
+                <option value="2">0.50 N</option>
+                <option value="3">0.98 N</option>
+            </select>
+            <a class="btn" href='javascript:;' onClick='checkTask1();'>Odpowiedz</a>
+        </p>
+
+        <p class="contentText" id="answer1" align="justify" style="display: none;"><span class="questionText"
+                id="yn1"></span>Wskazanie: Sprawdzamy stan poślizgu lub spoczynku ciała tj. porównujemy wielkość siły F
+            = 0.5 N z siłą tarcia ślizgowego Fts = kmg = 0.98 N. Dlatego siła tarcia ślizgowego jest większa niż siła
+            zewnętrzna, a ciało nie może się poruszać, dlatego Ft = F = 0.5 N.
+        </p></br>
+
+        <p class="contentText" align="justify"><span class="topicText">№ 2. </span>Ciało o masie m = 1,0 kg leży na
+            poziomej powierzchni. Współczynnik tarcia k = 0.1. Na ciało działa pozioma siła F = 1.50 N. Znajdź siłę
+            tarcia.
+        </p>
+
+        <p class="contentText" align="justify">Siła tarcia wynosi:
+            <select id="task2">
+                <option value="1">1.48 N</option>
+                <option value="2">0.50 N</option>
+                <option value="3">0.98 N</option>
+            </select>
+            <a class="btn" href='javascript:;' onClick='checkTask2();'>Odpowiedz</a>
+        </p>
+
+        <p class="contentText" id="answer2" align="justify" style="display: none;"><span class="questionText"
+                id="yn2"></span>Wskazanie. Porównanie wartości siły F = 1.5 N z siłą tarcia ślizgowego Fts = kmg =
+            0,98 N pokazuje, że siła tarcia jest mniejsza od działającej, tj. ciało się porusza, Ft = 0,98 N.
+        </p></br></br>
+
+        <div style="width: 280; height: 260; display: block; margin: 0px 425px;">
+            <p class="topicText" align="left">Kalkulator</p>
+
+            <p class="questionText">Masa ciała w kg:
+                <input type="text" id="m" name="fm" size="7" style="margin-left: 47px;" />
+            </p>
+
+            <p class="questionText">Współczynnik tarcia:
+                <input type="text" id="k" name="fk" size="7" style="margin-left: 5px;" />
+            </p>
+
+            <p class="questionText">Działająca siła:
+                <input type="text" id="f" name="ff" size="7" style="margin-left: 56px;" />
+            </p>
+
+            <p>
+                <a class="btn" style="margin-left: 0px;" href='javascript:;' onClick='count();'>Oblicz</a><br />
+            </p>
+
+            <p id="calculated" class="questionText">
+            </p>
+        </div>
+
 
     </div>
 
