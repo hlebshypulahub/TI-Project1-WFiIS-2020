@@ -43,6 +43,7 @@ body {
 }
 
 .contentText {
+    text-align: justify;
     color: rgb(92, 25, 25);
     font-family: 'NormalFont';
     font-size: 18px;
