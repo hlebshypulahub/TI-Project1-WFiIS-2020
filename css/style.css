@@ -58,6 +58,7 @@ body {
 }
 
 .shine:hover {
+    transition: 1s;
     box-shadow: 0 0 15px #881717;
     border: 1px solid #6200ff;
     transform: scale(1.1);
@@ -70,4 +71,17 @@ body {
 .topicDesc {
     margin-left: 130px;
     width: 1000px;
+}
+
+.logo {
+    display: block;
+    overflow: hidden;
+    width: 668px;
+    height: 155px;
+    margin: 0 auto;
+}
+
+.logo:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
 }

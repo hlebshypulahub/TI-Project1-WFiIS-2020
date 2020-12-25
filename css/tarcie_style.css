@@ -112,3 +112,16 @@ a.btn:hover {
     font-size: 20px;
     margin: 0px 430px
 }
+
+.logo {
+    display: block;
+    overflow: hidden;
+    width: 668px;
+    height: 155px;
+    margin: 0 auto;
+}
+
+.logo:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
+}
